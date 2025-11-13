@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINCIPAL Restaurant</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
+        header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+        nav { margin-top: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        section { padding: 40px; max-width: 1200px; margin: auto; }
+        .hero { background-image: url('https://via.placeholder.com/1200x400?text=Restaurant+Interior'); background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .menu { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .menu-item { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 10px; padding: 20px; width: 300px; text-align: center; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        input, select, button { display: block; width: 100%; margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #2c3e50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #34495e; }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PRINCIPAL</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#reservations">Reservations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h2>Welcome to PRINCIPAL</h2>
+            <p>Experience fine dining in an elegant atmosphere.</p>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <h3>Appetizers</h3>
+                <p>Bruschetta - $12<br>Tomato, basil, mozzarella on toasted bread.</p>
+                <p>Stuffed Mushrooms - $15<br>Herb-filled mushrooms with cheese.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Main Courses</h3>
+                <p>Grilled Salmon - $28<br>Fresh salmon with seasonal vegetables.</p>
+                <p>Beef Tenderloin - $35<br>Prime cut with red wine reduction.</p>
+                <p>Pasta Primavera - $22<br>Vegetable pasta in light sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Desserts</h3>
+                <p>Tiramisu - $10<br>Coffee-soaked ladyfingers with mascarpone.</p>
+                <p>Chocolate Lava Cake - $12<br>Warm cake with molten center.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservations">
+        <h2>Reserve a Table</h2>
+        <form id="reservationForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <select id="partySize" required>
+                <option value="">Party Size</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+            </select>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Main St, City, State<br>Phone: (123) 456-7890<br>Email: info@principalrestaurant.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 PRINCIPAL Restaurant. Follow us on <a href="#" style="color: white;">Social Media</a>.</p>
+    </footer>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Reservation request submitted! We will contact you soon.');
+            // In a real setup, send data to a server or email service.
+        });
+    </script>
+</body>
+</html>
